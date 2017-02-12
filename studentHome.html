@@ -49,245 +49,77 @@
             </div>
           </div>
         </nav>
-            <div class="inner-bg">
-               <div class="container">
-                  <div class="row">
-                  <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Math</a>
-                      <a href="#">Science</a>
-                      <a href="#">English</a>
-                      <a href="#">Social Studies</a>
-                      <a href="#">Language</a>
-                      <a href="#">History</a>
-                    </div>
-                  </div>
-                      <button type="submit" class="btn-searchStudents" onclick = "lookForStudent()" id="searchStudents-btn">
-                        <div id="state" class="grid_4 alpha">
-                            <div id="gps_ring_style" class="gps_ring"></div>
-                        </div>
-                        SUBJECT AREA
-                     </button>
-                     <div class="spacer" style="height: 50px"></div>
-                     <div class="col-sm-6 form-box wow fadeInUp">
-                        <div class="form-top">
-                           <div class="form-top-left">
-                              <div id="titleAddress">Location of Student</div>
-                              <div class="background-line-location" data-reactid="172"><span class="push-tiny--sides text--uppercase small" data-reactid="173"> &nbsp; &nbsp;</span></div>
-                              <div id="studentName"> </div>
-                              <div id="phoneNumber"> </div>
-                              <div style="height: 10px;" id="spacingAddress"></div>
-                              <div id="addressOutput"> </div>
-                              <div style="height: 30px;" id="spacingAddress"></div>
-                              <div id="basic_map"></div> <!-- MAP CONTENT-->
-                           </div>
-                        </div>
-                     </div>   
-                        <div class="col-sm-6 form-box wow fadeInUp">
-                          <div class="form-top">
-                            <div class="form-top-left">
-                              <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <div id="estimatedPriceHeader">Estimated Profit:</div>  
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                              <div id="profitOutput"> Start TUTORING!</div>
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="spacing" style="height: 180px"></div>
-                        <div class="col-sm-6 form-box wow fadeInUp">
-                          <div class="form-top">
-                            <div class="form-top-left">
-                              <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <div id="estimatedPriceHeader"> Distance to Destination:</div>  
-                              <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <div id="distangeRange"> Start TUTORING!</div>
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="spacing" style="height: 180px"></div>
-                        <div class="col-sm-6 form-box wow fadeInUp">
-                          <div class="form-top">
-                            <div class="form-top-left">
-                              <div id="estimatedPriceHeader">Estimated Time of to Destination:</div>  
-                              <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <div id="timeArrival"> Start TUTORING!</div>
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="spacing" style="height: 150px"></div>
-                        <div class="col-sm-6 form-box wow fadeInUp">
-                          <div class="form-top">
-                            <div class="form-top-left">
-                              <center> <button type="submit" class="btn-accept" onclick="acceptStudent()" id="searchStudents-btn">
-                                 ACCEPT!
-                              </button>
-                              <button type="submit" class="btn-decline" onclick = "declineStudent()" id="searchStudents-btn">
-                                 DECLINE!
-                              </button>
-                              </center>
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                        
-        <!-- About -->
-        <div class="features-container section-container">
+        <div class="inner-bg">
           <div class="container">
-              <div class="row">
-                  <div class="col-sm-12 features section-description wow fadeIn">
-                      <h2>Profits History</h2>
-                      <div class="divider-1 wow fadeInUp"><span></span></div>
-                  </div>
+          <div class="row">
+            <div class="dropdown">
+              <button onclick="myFunction()" id="dropbtnContent" class="dropbtn">Subject Area</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a onclick="mathFunction()" href="#">Math</a>
+                <a onclick="scienceFunction()" href="#">Science</a>
+                <a onclick="englishFunction()" href="#">English</a>
+                <a onclick="socialStudiesFunction()" href="#">Social Studies</a>
+                <a onclick="languageFunction()" href="#">Language</a>
+                <a onclick="historyFunction()" href="#">History</a>
               </div>
-              <div class="row">
-                  <div class="col-sm-12 features-box features-box wow fadeInUp">
-                    <div class="features-box-icon">
-                      <span aria-hidden="true" class="typcn typcn-thumbs-ok"></span>
-                    </div>
-                      <h3>What is Sage?</h3>
-                      <p>Sage is a web based tutoring service in which students can sign up to tutor other students.
-                        This service serves as a way for students who wish to tutor find those who wish to be tutored.</p>
-                    </div>
+            </div>
+            <div class="spacer" style="height: 20px"></div>
+            <div class="dropdown">
+              <button onclick="subareaFunction()" id="subarea" class="dropbtn">Subarea</button>
+              <div id="myDropdownSubarea" class="dropdown-content-subarea">
+                <a onclick="linearAlgFunction()" href="#">Linear Algebra</a>
+                <a onclick="calculusFunction()" href="#">Calculus</a>
               </div>
+            </div>
+            <div class="spacer" style="height: 25px"></div>
+            <center> <button type="submit" class="btn-search" onclick="acceptStudent()" id="searchStudents-btn">
+            Search
+            </button> 
+            <div class="spacer" style="height: 40px"></div>
           </div>
         </div>
-
-        <!-- Footer -->
-        <footer>
-          <div class="container">
+        <div id="basic_map"></div> <!-- MAP CONTENT-->
+      </div>
+                
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+                  <div class="col-sm-12 footer-social">
+                    <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+                    <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+                    <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+                    <a href="#"><span class="typcn typcn-social-google-plus"></span></a>
+                    <a href="#"><span class="typcn typcn-social-instagram"></span></a>
+                    <a href="#"><span class="typcn typcn-social-pinterest"></span></a>
+                  </div>
+            </div>
             <div class="row">
-                    <div class="col-sm-12 footer-social">
-                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
-                      <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-                      <a href="#"><span class="typcn typcn-social-google-plus"></span></a>
-                      <a href="#"><span class="typcn typcn-social-instagram"></span></a>
-                      <a href="#"><span class="typcn typcn-social-pinterest"></span></a>
-                    </div>
+                  <div class="col-sm-12 footer-copyright">
+                    &copy; Marco Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
+                  </div>
               </div>
-              <div class="row">
-                    <div class="col-sm-12 footer-copyright">
-                      &copy; Marco Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
-                    </div>
-                </div>
-          </div>
-        </footer>
-
-        <!-- MODAL: Privacy policy -->
-        <div class="modal fade" id="modal-privacy" tabindex="-1" role="dialog" aria-labelledby="modal-privacy-label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                <h2 class="modal-title" id="modal-privacy-label">Privacy policy</h2>
-              </div>
-              <div class="modal-body">
-                <h3>1. Dolor sit amet</h3>
-                <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-                      <ul>
-                        <li>Easy To Use</li>
-                        <li>Awesome Design</li>
-                        <li>Cloud Based</li>
-                      </ul>
-                      <p>
-                        Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                        commodo consequat nostrud tation.
-                      </p>
-                      <h3>2. Sed do eiusmod</h3>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-                      <h3>3. Nostrud exerci tation</h3>
-                      <p>
-                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                        commodo consequat nostrud tation.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
         </div>
+      </footer>
 
-        <!-- MODAL: Frequent questions -->
-        <div class="modal fade" id="modal-faq" tabindex="-1" role="dialog" aria-labelledby="modal-faq-label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                <h2 class="modal-title" id="modal-faq-label">Frequent questions</h2>
-              </div>
-              <div class="modal-body">
-                <h3>1. Lorem ipsum dolor?</h3>
-                <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-                      <h3>2. Ut wisi enim ad minim?</h3>
-                      <p>
-                        Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                        commodo consequat nostrud tation.
-                      </p>
-                      <h3>3. Sed do eiusmod tempor?</h3>
-                      <p>
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-                      <h3>4. Nostrud exerci tation?</h3>
-                      <p>
-                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                        commodo consequat nostrud tation.
-                      </p>
-                      <h3>5. Consectetur adipisicing elit?</h3>
-                      <p>
-                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                      </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
+       <!-- Javascript -->
+       <script src="assets/js/jquery-1.11.1.min.js"></script>
+       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+       <script src="assets/js/jquery.backstretch.min.js"></script>
+       <script src="assets/js/wow.min.js"></script>
+       <script src="assets/js/retina-1.1.0.min.js"></script>
+       <script src="assets/js/scripts.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+       <script type="text/javascript" src = "js/studentHome.js"></script>
 
-         <!-- Javascript -->
-         <script src="assets/js/jquery-1.11.1.min.js"></script>
-         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-         <script src="assets/js/jquery.backstretch.min.js"></script>
-         <script src="assets/js/wow.min.js"></script>
-         <script src="assets/js/retina-1.1.0.min.js"></script>
-         <script src="assets/js/scripts.js"></script>
-         <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-         <script type="text/javascript" src = "js/studentHome.js"></script>
-         <!-- toast -->
-         <script src="js/toastr.js"></script>
-         
-         <!-- GOOGLE MAPS API -->
-         <script type="text/javascript" src="js/maps-js/ajax-maps.js"></script>
-         <script type="text/javascript" src="js/maps-js/maps-api.js"></script>
-         <script type="text/javascript" src="js/maps-js/gmaps.js"></script>
-         <script src="assets/js/jquery.backstretch.min.js"></script><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+       <!-- toast -->
+       <script src="js/toastr.js"></script>
+       
+       <!-- GOOGLE MAPS API -->
+       <script type="text/javascript" src="js/maps-js/ajax-maps.js"></script>
+       <script type="text/javascript" src="js/maps-js/maps-api.js"></script>
+       <script type="text/javascript" src="js/maps-js/gmaps.js"></script>
+       <script src="assets/js/jquery.backstretch.min.js"></script><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
     </body>
 
 </html>
