@@ -127,7 +127,7 @@
                                                        <label class="sr-only" for="form-last-name">lastname</label>
 
                                                        <div style="width: 90px; height: 6px" class="spacing"> </div>
-                                                       <input type="text" id="text" name="text_name" class=form-subject-area style="width: 400px; height: 100px" />
+                                                       <input type="text" id="text" name="text_name" class=form-subject-area style="width: 400px; height: 100px" readonly />
 
                                                        </div>
 
@@ -135,7 +135,7 @@
                                                        </div>
 
                             <div style="width: 50px; height: 10px"id="spacing"> </div>
-                            <button type="submit" class="btn-login" id="student-btn">SIGN UP AS A TUTOR </button>
+                            <button type="submit" class="btn-login" id="student-btn" onclick="clicked()">SIGN UP AS A TUTOR </button>
 
                               <div style="width: 50px; height: 20px" class="spacing"> </div>
 
@@ -180,6 +180,25 @@
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script type="text/javascript" src = "js/tutorSignup.js"> </script>
+
+
+        
+        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBHEVuRmwW6KvesvZwo27tBCMUleuWko8M",
+            authDomain: "usernameandpassword-d55a8.firebaseapp.com",
+            databaseURL: "https://usernameandpassword-d55a8.firebaseio.com",
+            storageBucket: "usernameandpassword-d55a8.appspot.com",
+            messagingSenderId: "586459769797"
+          };
+          firebase.initializeApp(config);
+</script>  
+
+
+
+
     </body>
 
 </html>
