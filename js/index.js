@@ -11,7 +11,6 @@ function redirectTutor() {
 
 //This method runs what happens when the sign-in box for "student sign-in" is clicked 
 function studentClicked(){
-
    //  curl 'https://docs-examples.firebaseio.com/rest/saving-data/fireblog/posts.json?print=pretty'
      console.log("clicked"); 
      var username = document.getElementById('student-login-username').value;
@@ -20,17 +19,18 @@ function studentClicked(){
 
 
      firebase.auth().signInWithEmailAndPassword(username, password).then(function(firebaseUser){
-          alert("You just logged in successfully"); 
+          toastr.success("Successfully logged in!");
+          window.location.href = "studentHome.html";
           console.log("successfully logged in");
      }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           if(errorCode === 'auth/wrong-password'){
-          alert('Wrong password.');
-     }else{
-          alert(errorMessage);
-     }
+               toastr.error("Wrong Password!");
+          } else{
+               alert(errorMessage);
+          }
           console.log(error);
           // ...
      });
@@ -42,14 +42,15 @@ function tutorClicked(){
      var password = document.getElementById('tutor-login-password').value;
 
      firebase.auth().signInWithEmailAndPassword(username, password).then(function(firebaseUser){
-          alert("You just logged in successfully"); 
-          console.log("successfully logged in");
+          toastr.success("Successfully logged in!");
+          window.location.href = "tutorHome.html";
+          console.log("Successfully logged in");
      }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           if(errorCode === 'auth/wrong-password'){
-          alert('Wrong password.');
+          toastr.error("Wrong Password!");
      } else{
           alert(errorMessage);
      }

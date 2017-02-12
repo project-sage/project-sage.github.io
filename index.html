@@ -20,7 +20,8 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
+        <!-- Toaster css -->
+        <link href="assets/css/toastr.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -41,7 +42,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="top-navbar-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a class="scroll-link" href="#features">ABOUT SAGE</a></li>
+							<li><a class="scroll-link" href="#features">ABOUT</a></li>
 							<li><a class="scroll-link" href="#about-us">DEVELOPERS</a></li>
 							<li><a class="scroll-link" href="#call-to-action">CONTACT US</a></li>
 						</ul>
@@ -90,8 +91,12 @@
 			                        <div class="background-line" data-reactid="172"><span class="push-tiny--sides text--uppercase small" data-reactid="173">OR</span></div>
                         			<h3 style="height: 40px;"><center>Sign up </center></h3>
                         			<div id="signup-form">
-                    					<button type="submit" class="btn-signup-tutor" id="tutor-btn">as a <br/> tutor </button>
-                    					<button type="submit" class="btn-signup-student" id="student-btn">as a <br/> student </button>
+                        				<a href="tutorSignup.html">
+                    						<button type="submit" class="btn-signup-tutor" id="tutor-btn">as a <br/> tutor </button>
+                    					</a>
+                    					<a href="studentSignUp.html">
+                    						<button type="submit" href="studentSignup.html" class="btn-signup-student" id="student-btn">as a <br/> student </button>
+                    					</a>
                     				</div>
                     				<div style="width: 50px; height: 20px"id="spacing"> </div>
                         		</div>
@@ -202,7 +207,7 @@
 		                	<div class="about-us-role">Developer</div>
 		                </div>
 	                    <h3>Salvatore Grillo</h3>
-	                    <p>I am a young developer looking to get into the field! I'm a Freshman CS major at Cal Poly Pomona, someone who is interested in gameing, coding and technology and I am constantly in search of something new to do or learn. I also have experience with HTML5 and Java I am also a member within the Gamee Design and Development club, and I hope to one day be a major part of the industry, whether or not that is within Gaming or Software development. </p>
+	                    <p>I am a young developer looking to get into the field! I'm a Freshman CS major at Cal Poly Pomona, someone who is interested in gameing, coding and technology and I am constantly in search of something new to do or learn. I also have experience with HTML5 and Java I am also a member within the Game Design and Development club, and I hope to one day be a major part of the industry, whether or not that is within Gaming or Software development. </p>
 	                    <div class="about-us-social">
 		                	<a href="#"><span class="typcn typcn-social-facebook"></span></a>
 		                	<a href="#"><span class="typcn typcn-social-dribbble"></span></a>
@@ -217,7 +222,7 @@
                      <div class="about-us-role">Developer</div>
                    </div>
                      <h3>Varun Venkitachalam</h3>
-                     <p>With a passion for creativity, I have always been intrigued by technology and software development. I am a Freshman Computer Science major who has experience with Java, Javascript, and C++. Course work relating to my major include Java, Programming and Problem Solving, Discrete Structures, and Multivariable Calculus. In addition, I have been very active in many clubs including the Computer Science Society, Cal Poly Pomona Swift, and the Game Design and Development Club. In my free time I enjoy swimming laps and playing tennis. Overall, I am a passionate developer who is cruising along the path of life in search for opportunities along the way.</p>
+                     <p>With a passion for creativity, I have always been intrigued by technology and software development. I am a Freshman Computer Science major who has experience with Java, Javascript, and HTML. Course work relating to my major include Java, Programming and Problem Solving, Discrete Structures, and Multivariable Calculus. In addition, I have been very active in many clubs including the Computer Science Society, Cal Poly Pomona Swift, and the Game Design and Development Club. In my free time I enjoy swimming laps and playing tennis. Overall, I am a passionate developer who is cruising along the path of life in search for opportunities along the way.</p>
                      <div class="about-us-social">
                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
@@ -263,98 +268,6 @@
 	        </div>
         </footer>
 
-
-        <!-- MODAL: Privacy policy -->
-        <div class="modal fade" id="modal-privacy" tabindex="-1" role="dialog" aria-labelledby="modal-privacy-label" aria-hidden="true">
-        	<div class="modal-dialog">
-        		<div class="modal-content">
-        			<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal">
-        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-        				</button>
-        				<h2 class="modal-title" id="modal-privacy-label">Privacy policy</h2>
-        			</div>
-        			<div class="modal-body">
-        				<h3>1. Dolor sit amet</h3>
-        				<p>
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-	                    <ul>
-	                    	<li>Easy To Use</li>
-	                    	<li>Awesome Design</li>
-	                    	<li>Cloud Based</li>
-	                    </ul>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
-	                    	commodo consequat nostrud tation.
-	                    </p>
-	                    <h3>2. Sed do eiusmod</h3>
-	                    <p>
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-	                    <h3>3. Nostrud exerci tation</h3>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-	                    	commodo consequat nostrud tation.
-	                    </p>
-	                    <p>
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-        			</div>
-        			<div class="modal-footer">
-        				<button type="button" class="btn" data-dismiss="modal">Close</button>
-        			</div>
-        		</div>
-        	</div>
-        </div>
-
-        <!-- MODAL: Frequent questions -->
-        <div class="modal fade" id="modal-faq" tabindex="-1" role="dialog" aria-labelledby="modal-faq-label" aria-hidden="true">
-        	<div class="modal-dialog">
-        		<div class="modal-content">
-        			<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal">
-        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-        				</button>
-        				<h2 class="modal-title" id="modal-faq-label">Frequent questions</h2>
-        			</div>
-        			<div class="modal-body">
-        				<h3>1. Lorem ipsum dolor?</h3>
-        				<p>
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-	                    <h3>2. Ut wisi enim ad minim?</h3>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
-	                    	commodo consequat nostrud tation.
-	                    </p>
-	                    <h3>3. Sed do eiusmod tempor?</h3>
-	                    <p>
-	                    	Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-	                    <h3>4. Nostrud exerci tation?</h3>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-	                    	commodo consequat nostrud tation.
-	                    </p>
-	                    <h3>5. Consectetur adipisicing elit?</h3>
-	                    <p>
-	                    	Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-	                    </p>
-        			</div>
-        			<div class="modal-footer">
-        				<button type="button" class="btn" data-dismiss="modal">Close</button>
-        			</div>
-        		</div>
-        	</div>
-        </div>
-
-
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -367,14 +280,16 @@
 		<script>
   		// Initialize Firebase
   		var config = {
-    	apiKey: "AIzaSyBHEVuRmwW6KvesvZwo27tBCMUleuWko8M",
-    	authDomain: "usernameandpassword-d55a8.firebaseapp.com",
-    	databaseURL: "https://usernameandpassword-d55a8.firebaseio.com",
-    	storageBucket: "usernameandpassword-d55a8.appspot.com",
-    	messagingSenderId: "586459769797"
+	    	apiKey: "AIzaSyBHEVuRmwW6KvesvZwo27tBCMUleuWko8M",
+	    	authDomain: "usernameandpassword-d55a8.firebaseapp.com",
+	    	databaseURL: "https://usernameandpassword-d55a8.firebaseio.com",
+	    	storageBucket: "usernameandpassword-d55a8.appspot.com",
+	    	messagingSenderId: "586459769797"
   		};
   		firebase.initializeApp(config);
 		</script>
+		<!-- toast -->
+         <script src="js/toastr.js"></script>
 
     </body>
 

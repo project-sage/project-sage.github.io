@@ -275,7 +275,7 @@ ul.navbar-nav {
 /***** Top content *****/
 
 .inner-bg {
-    padding: 30px 0 170px 0;
+    padding: 30px 0 0px 0;
     /*background: '../img/backgrounds/1.jpg';*/
     background: url(../img/backgrounds/1.jpg) no-repeat calc(100%) center;
     background-size: 100% 53%;
