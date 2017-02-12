@@ -34,6 +34,9 @@ function clicked(){
     subjectText += "Math "; 
   }
 
+  //var tokenizedSubjects = subjectText.split(" ");
+   
+  /*
   if($('#subject-Language').is(':checked')){
     subjectText += "Language "; 
   }
@@ -53,7 +56,7 @@ function clicked(){
   if($('#subject-English').is(':checked')){
     subjectText += "English "; 
   }
-
+  */
 
 
 
@@ -69,7 +72,7 @@ function clicked(){
     return;
   } else {
       firebase.auth().createUserWithEmailAndPassword(username, password).catch(function(error) {
-        alert("account made it into database")
+        alert("account made it into database");
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("error: " + error);
@@ -94,7 +97,17 @@ function clicked(){
           First_Name : firstName,
           Last_Name : lastName,
           Credit_Card_Number : creditCardInfo,
+          subject: subjectText,
           specifics : outputBox 
+      });
+
+      firebase.database().ref('ListofCourses/' + subjectText).update({
+        Specific:  outputBox
+        //alert("account made it into database");
+        //var errorCode = error.code;
+        //var errorMessage = error.message;
+        //console.log("error: " + error);
+        //alert("error: " + error);
       });
   }
 
