@@ -34,6 +34,27 @@ window.onload = function(){
 		        strokeWeight: 6
 	      });
 
+		 map.setCenter(latLocationTutor, lonLocationTutor);
+ 			map.drawRoute({
+ 				origin: [34.0798011, -117.8342253],
+ 		        destination: [latLocationStudent, lonLocationStudent],
+ 		        travelMode: 'driving',
+ 		        strokeColor: 'green',
+ 		        strokeOpacity: 0.8,
+ 		        strokeWeight: 6
+ 	      });
+
+		 map.setCenter(latLocationTutor, lonLocationTutor);
+		    map.drawRoute({
+			    origin: [34.0133965, -117.68],
+			  destination: [latLocationStudent, lonLocationStudent],
+			  travelMode: 'driving',
+			  strokeColor: 'purple',
+			  strokeOpacity: 0.8,
+			  strokeWeight: 6
+		});
+
+
 		// calculate the time
 		map.getRoutes({
             origin: [latLocationTutor, lonLocationTutor],
@@ -50,7 +71,7 @@ window.onload = function(){
         });
 
 		// // add markers for geolocation of the student's address
-		map.addMarker({ 
+		map.addMarker({
 			lat: latLocationStudent,
 			lng: lonLocationStudent,
 			title: 'Madame Tussauds',
@@ -59,9 +80,27 @@ window.onload = function(){
 			}
 	    });
 
+	    map.addMarker({
+		    lat: 34.0798011,
+		    lng: -117.8342253,
+		    title: 'Madame Tussauds',
+		    infoWindow: {
+			    content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+		    }
+	   });
+
+	   map.addMarker({
+		   lat: 34.0133965,
+		   lng: -117.68,
+		   title: 'Madame Tussauds',
+		   infoWindow: {
+			   content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+		   }
+	  });
+
 	    // if user clicks 'accept button'
-	    
-	    // calculate the distance 
+
+	    // calculate the distance
 	    var p1 = new google.maps.LatLng(latLocationTutor, lonLocationTutor);
 		var p2 = new google.maps.LatLng(latLocationStudent, lonLocationStudent);
 		var distance = calcDistance (p1, p2).toFixed(2);
@@ -244,7 +283,7 @@ function close(classDiv) {
 		    openDropdown.classList.remove('show');
 	  	}
 	}
-	
+
 }
 //calculates distance between two points in km's
 function calcDistance(p1, p2) {

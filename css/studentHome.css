@@ -506,7 +506,7 @@ ul.navbar-nav {
     position: absolute;
     left: 600px;
     -webkit-animation: pulsate 1.5s ease-out;
-    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite;
     opacity: 0.0
 }
 
