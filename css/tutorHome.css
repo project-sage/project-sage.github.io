@@ -456,6 +456,24 @@ ul.navbar-nav {
     padding-left: 0px;
 }
 
+#distangeRange {
+	font-size: 20px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+#timeArrival {
+	font-size: 20px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 0px;
+}
+
 #titleAddress {
 	font-size: 22px;
     font-weight: 300;
@@ -471,6 +489,53 @@ ul.navbar-nav {
     line-height: 30px;
     text-align: center;
 }
+
+.btn-accept {
+	height: 10px;
+	width: 45%;
+	text-align: center;
+    margin: 0;
+    padding: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background: #57AD57;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 40px;
+    text-shadow: none;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.btn-accept:hover { color: #57AD57; background-color: rgb(246,246,247)}
+
+.btn-decline {
+	height: 10px;
+	width: 45%;
+	text-align: center;
+    margin: 0;
+    padding: 10px 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    background: #E74C3C;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: none;
+    border-radius: 40px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.btn-decline:hover { color: #E74C3C; background-color: rgb(246,246,247)}
 
 .background-line-location {
     color: #717171;

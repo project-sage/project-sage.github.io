@@ -89,9 +89,9 @@
                           <div class="form-top">
                             <div class="form-top-left">
                               <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <div id="estimatedPriceHeader">Optimized Distance:</div>  
-                              <div style="width: 50px; height: 20px" class="spacing"> </div>
-                              <div id="profitOutput"> Distance Range!</div>
+                              <div id="estimatedPriceHeader"> Distance to Destination:</div>  
+                              <div style="width: 50px; height: 10px" class="spacing"> </div>
+                              <div id="distangeRange"> Calculating Total Distance...</div>
                               <div style="width: 50px; height: 20px" class="spacing"> </div>
                             </div>
                           </div>
@@ -102,15 +102,31 @@
                             <div class="form-top-left">
                               <div id="estimatedPriceHeader">Estimated Time of to Destination:</div>  
                               <div style="width: 50px; height: 10px" class="spacing"> </div>
+                              <div id="timeArrival"> Calculating Estimated Time of Arrival...</div>
+                              <div style="width: 50px; height: 20px" class="spacing"> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="spacing" style="height: 150px"></div>
+                        <div class="col-sm-6 form-box wow fadeInUp">
+                          <div class="form-top">
+                            <div class="form-top-left">
+                              <center> <button type="submit" class="btn-accept" onclick = "acceptStudent()" id="searchStudents-btn">
+                                 ACCEPT!
+                              </button>
+                              <button type="submit" class="btn-decline" onclick = "declineStudent()" id="searchStudents-btn">
+                                 DECLINE!
+                              </button>
+                              </center>
+                              <div style="width: 50px; height: 20px" class="spacing"> </div>
                             </div>
                           </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
+                        
         <!-- About -->
         <div class="features-container section-container">
           <div class="container">
@@ -129,17 +145,6 @@
                       <p>Sage is a web based tutoring service in which students can sign up to tutor other students.
                         This service serves as a way for students who wish to tutor find those who wish to be tutored.</p>
                     </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-12 features-box features-box-gray wow fadeInUp">
-                    <div class="features-box-icon">
-                      <span aria-hidden="true" class="typcn typcn-thumbs-ok"></span>
-                    </div>
-                      <h3>Why Choose Sage?</h3>
-                      <p>Sage provides as web based version of finding other students. It services as an online alternative
-                        to manually finding people who need to be tutored.</p>
-                    </div>
-              </div>
               </div>
           </div>
         </div>
@@ -270,7 +275,7 @@
          <script type="text/javascript" src="js/maps-js/ajax-maps.js"></script>
          <script type="text/javascript" src="js/maps-js/maps-api.js"></script>
          <script type="text/javascript" src="js/maps-js/gmaps.js"></script>
-         <script src="assets/js/jquery.backstretch.min.js"></script>
+         <script src="assets/js/jquery.backstretch.min.js"></script><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
     </body>
 
 </html>
