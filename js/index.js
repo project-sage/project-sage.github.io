@@ -11,9 +11,8 @@ function redirectTutor() {
 
 //This method runs what happens when the sign-in box for "student sign-in" is clicked 
 function studentClicked(){
-     
-   //  curl 'https://docs-examples.firebaseio.com/rest/saving-data/fireblog/posts.json?print=pretty'
 
+   //  curl 'https://docs-examples.firebaseio.com/rest/saving-data/fireblog/posts.json?print=pretty'
      console.log("clicked"); 
      var username = document.getElementById('student-login-username').value;
      var password = document.getElementById('student-login-password').value;
@@ -29,7 +28,7 @@ function studentClicked(){
           var errorMessage = error.message;
           if(errorCode === 'auth/wrong-password'){
           alert('Wrong password.');
-     } else{
+     }else{
           alert(errorMessage);
      }
           console.log(error);
