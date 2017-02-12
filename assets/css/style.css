@@ -29,6 +29,13 @@ h3 {
     color: black;
     line-height: 30px;
 }
+h4 {
+  margin-top: 10px;
+	font-size: 38px;
+    font-weight: 100;
+    color: white;
+    line-height: 50px;
+}
 
 img { max-width: 100%; }
 
@@ -86,6 +93,7 @@ img { max-width: 100%; }
 .section-container-image-bg h2,
 .section-container-image-bg h3 {
 	color: #fff;
+
 }
 
 .section-container-image-bg .divider-1 span {
@@ -875,4 +883,14 @@ footer {
 
 .footer-copyright {
 	margin-top: 25px;
+}
+/***** extra *****/
+#textchange{
+  color: white;
+}
+#othertext{
+  color: white;
+}
+.picture{
+  img src: "assets\img\testimonials\4.jpg"
 }
