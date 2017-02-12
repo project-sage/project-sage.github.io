@@ -1,4 +1,3 @@
-
 function read(){
 //<script type="text/javascript">
 //document.getElementById("userInput").addEventListener('click', function () {
