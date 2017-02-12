@@ -1,21 +1,22 @@
 // redirects user to new page
 function redirectStudent() {
-	alert("button clicked");
-	window.location = "studentSignup.html";
+     alert("button clicked");
+     window.location = "studentSignup.html";
 }
 
 function redirectTutor() {
-	alert("button clicked");
-	window.location = "http://www.google.com";
+     alert("button clicked");
+     window.location = "http://www.google.com";
 }
 
-
-function tutorClicked(){
-	 console.log("clicked"); 
-     var username = document.getElementById('username').value;
-     var password = document.getElementById('password').value;
+//This method runs what happens when the sign-in box for "student sign-in" is clicked 
+function studentClicked(){
+     console.log("clicked"); 
+     var username = document.getElementById('student-login-username').value;
+     var password = document.getElementById('student-login-password').value;
 
      firebase.auth().signInWithEmailAndPassword(username, password).then(function(firebaseUser){
+          alert("You just logged in successfully"); 
           console.log("successfully logged in");
      }).catch(function(error) {
           // Handle Errors here.
@@ -29,6 +30,31 @@ function tutorClicked(){
           console.log(error);
           // ...
      });
+}
+
+     //This method runs what happens when the sign-in box for "tutor" sign-in" is clicked 
+     function tutorClicked(){
+          console.log("clicked"); 
+          var username = document.getElementById('tutor-login-username').value;
+          var password = document.getElementById('tutor-login-password').value;
+
+     firebase.auth().signInWithEmailAndPassword(username, password).then(function(firebaseUser){
+          alert("You just logged in successfully"); 
+          console.log("successfully logged in");
+     }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          //if(errorCode === 'auth/wrong-password'){
+          //alert('Wrong password.');
+     } //else{
+          //alert(errorMessage);
+     //}
+          //console.log(error);
+          // ...
+     //});
+     
+
 /*
      mAuthListener = new FirebaseAuth.AuthStateListener() {
           @Override
