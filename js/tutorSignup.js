@@ -71,6 +71,17 @@ function clicked(){
     alert("Wrong email format"); 
     return;
   } else {
+      // read existing data from ListofCourses
+      var courseList = "";
+      //reading data here 
+      firebase.database().ref('ListofCourses').child(subjectText).child('Specific').on('value', function(snapshot){
+          var readData = snapshot.val();  
+          courseList += readData;
+          console.log("data: " + courseList);
+      }, function(errorObject) {
+          console.log("The read failed: " + errorObject.code);
+      });
+
       firebase.auth().createUserWithEmailAndPassword(username, password).catch(function(error) {
         alert("account made it into database");
         var errorCode = error.code;
@@ -101,22 +112,31 @@ function clicked(){
 
       firebase.database().ref('Users/' + usernameFinal + '/SubjectArea/' + subjectText).update({
           SpecificArea : subjectText
+      });              
 
+      if(courseList.indexOf(outputBox) >= 0) { // doesn't exist in existing firebase
+        courseList += ', ' + outputBox;
+      }
 
-      });
-
-      
-
+      console.log("final: " + courseList);
 
       firebase.database().ref('ListofCourses/' + subjectText).update({
-        Specific:  outputBox
+        // Specific:  courseList
+        Specific:  courseList
+
+
         //alert("account made it into database");
         //var errorCode = error.code;
         //var errorMessage = error.message;
         //console.log("error: " + error);
         //alert("error: " + error);
       });
+            // var courseList = "";
+
+      //reading data here 
   }
+
+
 
   //if()
 
