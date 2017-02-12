@@ -6,7 +6,7 @@ function redirectStudent() {
 
 function redirectTutor() {
      alert("button clicked");
-     window.location = "http://www.google.com";
+     window.location = "google.com";
 }
 
 //This method runs what happens when the sign-in box for "student sign-in" is clicked 
@@ -32,6 +32,28 @@ function studentClicked(){
      });
 }
 
+function tutorClicked(){
+     console.log("clicked"); 
+     var username = document.getElementById('tutor-login-username').value;
+     var password = document.getElementById('tutor-login-password').value;
+
+     firebase.auth().signInWithEmailAndPassword(username, password).then(function(firebaseUser){
+          alert("You just logged in successfully"); 
+          console.log("successfully logged in");
+     }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          if(errorCode === 'auth/wrong-password'){
+          alert('Wrong password.');
+     } else{
+          alert(errorMessage);
+     }
+          console.log(error);
+          // ...
+     });
+}
+/*
      //This method runs what happens when the sign-in box for "tutor" sign-in" is clicked 
      function tutorClicked(){
           console.log("clicked"); 
@@ -54,7 +76,7 @@ function studentClicked(){
           // ...
      //});
      
-
+*/
 /*
      mAuthListener = new FirebaseAuth.AuthStateListener() {
           @Override
@@ -71,4 +93,3 @@ function studentClicked(){
 
           };
      } */
-}
