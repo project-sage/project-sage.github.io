@@ -447,6 +447,24 @@ ul.navbar-nav {
     padding-left: 0px;
 }
 
+#studentName {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#phoneNumber {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    padding-left: 0px;
+    text-align: center;
+}
+
 #profitOutput {
 	font-size: 20px;
     font-weight: 300;
