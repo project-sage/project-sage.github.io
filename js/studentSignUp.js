@@ -32,11 +32,6 @@ function clicked(){
   var last_name = "last name goes here";
 
   firebase.auth().createUserWithEmailAndPassword(username, password).catch(function(error) {
-    //alert("account made it into database")
-    //var errorCode = error.code;
-    //var errorMessage = error.message;
-    //console.log("error: " + error);
-    //alert("error: " + error);
   });
 
   var usernameFinal = "";
