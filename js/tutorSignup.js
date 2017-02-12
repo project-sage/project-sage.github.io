@@ -28,6 +28,36 @@ function clicked(){
   var creditCardInfo = document.getElementById('credit-card').value; 
   var outputBox = document.getElementById('text').value; 
 
+  var subjectText = "";
+
+  if($('#subject-Math').is(':checked')){
+    subjectText += "Math "; 
+  }
+
+  if($('#subject-Language').is(':checked')){
+    subjectText += "Language "; 
+  }
+
+  if($('#subject-Science').is(':checked')){
+    subjectText += "Science "; 
+  }
+
+  if($('#subject-Geography').is(':checked')){
+    subjectText += "Geography "; 
+  }
+
+  if($('#subject-History').is(':checked')){
+    subjectText += "History "; 
+  }
+
+  if($('#subject-English').is(':checked')){
+    subjectText += "English "; 
+  }
+
+
+
+
+
   if(password != confirmPassword){
     alert("your passwords didn't match, please correct them before continuing");
     return; 
@@ -60,7 +90,7 @@ function clicked(){
           Phone_Number: phoneNumber,
           Student: false,
           Tutor: true,
-          //Skills: areaExpertise,
+          Subject_String : subjectText,
           First_Name : firstName,
           Last_Name : lastName,
           Credit_Card_Number : creditCardInfo,
