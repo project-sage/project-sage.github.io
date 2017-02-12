@@ -2,25 +2,39 @@ function clicked(){
   var user = firebase.auth().currentUser;
 
   var firstName = document.getElementById('student-firstname').value;
-  var lastName = document.getElementById('student-lastname').value; 
+  var lastName = document.getElementById('student-lastname').value;
   var username = document.getElementById('student-email').value;
   var password = document.getElementById('student-password').value;
   var tmp = document.getElementById('student-number').value
-  var phoneNumber = tmp.replace(/-|\s/g,"");  
+  var creditCard = document.getElementById('credit-card').value;
+  var phoneNumber = tmp.replace(/-|\s/g,"");
   var confirmPassword = document.getElementById('student-confirm').value;
   var rightEmailFormat = username.includes("@");
 
+
+
   if(password != confirmPassword){
     alert("your passwords didn't match, please correct them before continuing");
-    return; 
-    //window.location.reload(); 
+    return;
+  //  window.location.reload();
   }
 
-  if(!(rightEmailFormat)){
-    alert("Wrong email format"); 
-    return; 
+  if(tmp.charAt(9) === ''){
+    alert("Wrong phone format");
+    return;
     //window.location.reload();
   }
+  if(creditCard.charAt(15) === ''){
+    alert("Wrong credit card format");
+    return;
+    //window.location.reload();
+  }
+ if(!(rightEmailFormat)){
+    alert("Wrong email format");
+    return;
+  //  window.location.reload();
+  }
+
 
   //if()
 
@@ -52,7 +66,7 @@ function clicked(){
       //Credit_Card_Number : creditCardInfo,
       First_Name : firstName,
       Last_Name : lastName,
-      
-       
+
+
   });
 }
