@@ -259,7 +259,7 @@ ul.navbar-nav {
 
 .navbar-brand {
 	width: 97px;
-	background: url(../img/logo.png) left center no-repeat;
+	background: url(../assets/img/logo.png) left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -267,9 +267,9 @@ ul.navbar-nav {
 /***** Top content *****/
 
 .inner-bg {
-    padding: 30px 0 170px 0;
+    padding: 30px 0 0px 0;
     /*background: '../img/backgrounds/1.jpg';*/
-    background: url(../img/backgrounds/1.jpg) no-repeat calc(100%) center;
+    background: url(../assets/img/backgrounds/1.jpg) no-repeat calc(100%) center;
     background-size: 100% 53%;
     background-repeat: no-repeat;
 }
