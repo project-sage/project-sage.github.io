@@ -51,24 +51,37 @@
           </div>
         </nav>
             <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-7 text">
-                            <div class="description wow fadeInLeftBig"> put video here...
-                              <!-- put video here! -->
-                              <!-- <video width="620" height="340" controls autoplay>
-                  <source src="https://www.youtube.com/watch?v=Q6dsRpVyyWs" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video> -->
-                            </div>
+               <div class="container">
+                  <div class="row">
+                     <button type="submit" class="btn-searchStudents" onclick = "lookForStudent()" id="searchStudents-btn">
+                        <div id="state" class="grid_4 alpha">
+                            <div id="gps_ring_style" class="gps_ring"></div>
                         </div>
-                        <div class="col-sm-5 form-box wow fadeInUp">
+                        LOOK FOR STUDENTS 
+
+                     </button>
+                     <div class="spacer" style="height: 50px"></div>
+                     <div class="col-sm-6 form-box wow fadeInUp">
+                        <div class="form-top">
+                           <div class="form-top-left">
+                              <h3>Location of Student</h3>
+                              <div style="width: 50px; height: 10px" class="spacing"> </div>
+                              <label class="sr-only" for="form-first-name">Email</label>
+                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="student-login-username"> <!-- id for first name user input -->
+                              <label class="sr-only" for="form-first-name">Password</label>
+                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="student-login-password"> <!-- id for last name user input -->
+                              <div style="width: 50px; height: 10px"id="spacing"> </div>
+                              <button type="submit" class="btn-login" onclick = "studentClicked()" id="student-btn">SIGN IN AS A STUDENT </button>
+                           </div>
+                        </div>
+                     </div>   
+                        <div class="col-sm-6 form-box wow fadeInUp">
                           <div class="form-top">
                             <div class="form-top-left">
                               <div class="float-icon-student">
                                 <h3>Sign in as a Student</h3>
-                            </div>
-                            <div style="width: 50px; height: 10px" class="spacing"> </div>
+                              </div>
+                              <div style="width: 50px; height: 10px" class="spacing"> </div>
                               <label class="sr-only" for="form-first-name">Email</label>
                               <input name="form-first-name" placeholder="Email" class="form-signin top" id="student-login-username"> <!-- id for first name user input -->
                               <label class="sr-only" for="form-first-name">Password</label>
@@ -95,7 +108,7 @@
                             </div>
                             <div style="width: 50px; height: 20px"id="spacing"> </div>
                             </div>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +121,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-sm-12 features section-description wow fadeIn">
-                      <h2>About</h2>
+                      <h2>Total Profits</h2>
                       <div class="divider-1 wow fadeInUp"><span></span></div>
                   </div>
               </div>
@@ -157,60 +170,6 @@
           </div>
         </div>
 
-        <!-- About the Team -->
-        <div class="about-us-container section-container">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12 about-us section-description wow fadeIn">
-                      <h2>About us</h2>
-                      <div class="divider-1 wow fadeInUp"><span></span></div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-4 about-us-box wow fadeInUp">
-                    <div class="about-us-photo">
-                      <img src="assets/img/about/1.jpg" alt="" data-at2x="assets/img/about/1.jpg">
-                      <div class="about-us-role">Developer</div>
-                    </div>
-                      <h3>C Placeholder</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div class="about-us-social">
-                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
-                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 about-us-box wow fadeInDown">
-                    <div class="about-us-photo">
-                      <img src="assets/img/about/2.jpg" alt="" data-at2x="assets/img/about/2.jpg">
-                      <div class="about-us-role">Developer</div>
-                    </div>
-                      <h3>A Placeholder</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div class="about-us-social">
-                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
-                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 about-us-box wow fadeInUp">
-                    <div class="about-us-photo">
-                      <img src="assets/img/about/3.jpg" alt="" data-at2x="assets/img/about/3.jpg">
-                      <div class="about-us-role">Developer</div>
-                    </div>
-                      <h3>S Placeholder</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div class="about-us-social">
-                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
-                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-
         <!-- Footer -->
         <footer>
           <div class="container">
@@ -231,7 +190,6 @@
                 </div>
           </div>
         </footer>
-
 
         <!-- MODAL: Privacy policy -->
         <div class="modal fade" id="modal-privacy" tabindex="-1" role="dialog" aria-labelledby="modal-privacy-label" aria-hidden="true">
@@ -332,7 +290,7 @@
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-        <script type="text/javascript" src = "js/index.js"></script>
+        <script type="text/javascript" src = "js/tutorHome.js"></script>
     <script>
       // Initialize Firebase
       var config = {
