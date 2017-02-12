@@ -261,3 +261,7 @@ function declineStudent() {
 	console.log('toaster called!');
 	toastr.info('You have decline this student.');
 }
+
+function redirectToSignIn(){
+	window.location = "index.html";
+}
