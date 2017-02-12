@@ -55,10 +55,11 @@ window.onload = function(){
 			lng: lonLocationStudent,
 			title: 'Madame Tussauds',
 			infoWindow: {
-			 	content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+			 	content: '<p>Madame Tussauds is a wax museum in London with branches in a number of major cities.</p>'
 			}
 	    });
 
+		
 	    // if user clicks 'accept button'
 	    
 	    // calculate the distance 
