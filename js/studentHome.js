@@ -74,27 +74,27 @@ window.onload = function(){
 		map.addMarker({
 			lat: latLocationStudent,
 			lng: lonLocationStudent,
-			title: 'Madame Tussauds',
+		//	title: 'Rushi Shah (Rated 4/5)',
 			infoWindow: {
-			 	content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+			 	content: '<p> <strong> Rushi Shah (Rated 4/5) </strong> <br> I am a 4th year computer Science major who has experience with Calculus 1 and Multivariable Calculus  <br> <button> Contact This Tutor</button> </p>'
 			}
 	    });
 
 	    map.addMarker({
 		    lat: 34.0798011,
 		    lng: -117.8342253,
-		    title: 'Madame Tussauds',
+		  //  title: 'Madame Tussauds',
 		    infoWindow: {
-			    content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+			    content: '<p> <strong> Salvatore Grillo (Rated 3/5) </strong> <br> I am a freshman who has taken one calculus class and looking to make extra class. I can help with lower level calculus <br> <button> Contact This Tutor</button> </p>'
 		    }
 	   });
 
 	   map.addMarker({
 		   lat: 34.0133965,
 		   lng: -117.68,
-		   title: 'Madame Tussauds',
+		 //  title: 'Madame Tussauds',
 		   infoWindow: {
-			   content: '<p>Madame $ Tussauds is a wax museum in London with branches in a number of major cities.</p>'
+			   content: '<p> <strong> Tony Piaz (Rated 5/5) </strong> <br> Professor at Cal Poly Momona who has experience with higher level computer science as well as higher level mathematics including vector static, MulitVariable Calculus, and Linear Algebra  <br> <button> Contact This Tutor</button> </p>'
 		   }
 	  });
 
