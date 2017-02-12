@@ -4,12 +4,12 @@ function lookForStudent() {
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 	// obtain tutors's current address
-	var latLocationUser = 51.5073346, // default values
-	var lonLocationUser: -0.1276831;  // default values
-	navigator.geolocation.getCurrentPosition(function(location) {
-		latLocationUser = location.coords.latitude;
-		lonLocationUser = location.coords.longitude;
-	});
+	// var latLocationUser = 51.5073346, // default values
+	// var lonLocationUser: -0.1276831;  // default values
+	// navigator.geolocation.getCurrentPosition(function(location) {
+	// 	latLocationUser = location.coords.latitude;
+	// 	lonLocationUser = location.coords.longitude;
+	// });
 
 
 	// update student's address
