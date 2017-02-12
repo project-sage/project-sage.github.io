@@ -37,6 +37,10 @@ img { max-width: 100%; }
 	font-size: 18px;
 	line-height: 32px;
 }
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
 
 .colored-text { color: #42bfc2; }
 
@@ -287,6 +291,11 @@ ul.navbar-nav {
 	border-left: 5px solid rgb(246,246,250) !important;
 	text-align: left;
 }
+.table-top {
+	overflow: hidden;
+	padding-left: 25px;
+	text-align: center;;
+}
 
 .form-middle {
 	overflow: hidden;
@@ -429,7 +438,7 @@ ul.navbar-nav {
     position: absolute;
     left: 600px;
     -webkit-animation: pulsate 1.5s ease-out;
-    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite;
     opacity: 0.0
 }
 
