@@ -12,12 +12,43 @@ function clicked(){
 
   if(password != confirmPassword){
     alert("your passwords didn't match, please correct them before continuing");
-    window.location.reload(); 
-  }
-
-  if(!(rightEmailFormat)){
+    return; 
+  } else if(password.length < 6) {
+    alert("Length of your password must be greater than 6."); 
+    return;
+  }else if(!(rightEmailFormat)){
     alert("Wrong email format"); 
-    window.location.reload();
+    return;
+  } else {
+      firebase.auth().createUserWithEmailAndPassword(username, password).catch(function(error) {
+        alert("account made it into database")
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("error: " + error);
+        alert("error: " + error);
+      });
+
+      var usernameFinal = "";
+      for(var i = 0; i < username.length; i++) {
+        if(username.charAt(i) == '@') {
+          i = username.length;
+        } else {
+          usernameFinal += username.charAt(i);
+        }
+      }
+
+      firebase.database().ref('Users/' + usernameFinal).update({
+          Password: password,
+          Phone_Number: phoneNumber,
+          Student: true,
+          Tutor: false,
+          //Skills: areaExpertise,
+          //Credit_Card_Number : creditCardInfo,
+          First_Name : firstName,
+          Last_Name : lastName,
+          
+           
+      });
   }
 
   //if()
@@ -28,34 +59,4 @@ function clicked(){
   //var creditCardInfo = "XXX-XXX-XXXXX";
   var first_name = "first name goes here";
   var last_name = "last name goes here";
-
-  firebase.auth().createUserWithEmailAndPassword(username, password).catch(function(error) {
-    //alert("account made it into database")
-    //var errorCode = error.code;
-    //var errorMessage = error.message;
-    //console.log("error: " + error);
-    //alert("error: " + error);
-  });
-
-  var usernameFinal = "";
-  for(var i = 0; i < username.length; i++) {
-    if(username.charAt(i) == '@') {
-      i = username.length;
-    } else {
-      usernameFinal += username.charAt(i);
-    }
-  }
-
-  firebase.database().ref('Users/' + usernameFinal).update({
-      Password: password,
-      Phone_Number: phoneNumber,
-      Student: true,
-      Tutor: false,
-      //Skills: areaExpertise,
-      //Credit_Card_Number : creditCardInfo,
-      First_Name : firstName,
-      Last_Name : lastName,
-      
-       
-  });
 }
