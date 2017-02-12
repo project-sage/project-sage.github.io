@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sage   |   Home</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="fonts/roboto.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/typicons/typicons.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="css/tutorHome.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <!-- ionicons -->
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+      <!-- Top content -->
+      <div class="top-content">
+        <!-- Top menu -->
+        <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="tutorHome.html">Sage</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-navbar-1">
+              <ul style="padding-left: 200px" class="nav navbar-nav navbar-left">
+                <li><a style="color: white; font-weight: 200" class="scroll-link" href="tutorHome.html">USERNAME</a></li>
+                <li><a style="color: white; font-weight: 200" class="scroll-link" href="#about-us">SETTINGS</a></li>
+                <li><a style="color: white; font-weight: 200" class="scroll-link" id="logout" href="index.html">LOGOUT</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 text">
+                            <div class="description wow fadeInLeftBig"> put video here...
+                              <!-- put video here! -->
+                              <!-- <video width="620" height="340" controls autoplay>
+                  <source src="https://www.youtube.com/watch?v=Q6dsRpVyyWs" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-5 form-box wow fadeInUp">
+                          <div class="form-top">
+                            <div class="form-top-left">
+                              <div class="float-icon-student">
+                                <h3>Sign in as a Student</h3>
+                            </div>
+                            <div style="width: 50px; height: 10px" class="spacing"> </div>
+                              <label class="sr-only" for="form-first-name">Email</label>
+                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="student-login-username"> <!-- id for first name user input -->
+                              <label class="sr-only" for="form-first-name">Password</label>
+                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="student-login-password"> <!-- id for last name user input -->
+                              <div style="width: 50px; height: 10px"id="spacing"> </div>
+                              <button type="submit" class="btn-login" onclick = "studentClicked()" id="student-btn">SIGN IN AS A STUDENT </button>
+
+                            <div style="width: 50px; height: 20px" class="spacing"> </div>
+                              <div class="float-icon-tutor">
+                                <h3>Sign in to Tutor</h3>
+                            </div>
+                            <div style="width: 50px; height: 10px"id="spacing"> </div>
+                              <label class="sr-only" for="form-first-name">Email</label>
+                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="tutor-login-username"> <!-- id for first name user input -->
+                              <label class="sr-only" for="form-first-name">Password</label>
+                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="tutor-login-password"> <!-- id for last name user input -->
+                              <div style="width: 50px; height: 10px"id="spacing"> </div>
+                              <button type="submit" class="btn-login" onclick="tutorClicked()" id="tutor-btn">SIGN IN AS A TUTOR </button>
+                              <div class="background-line" data-reactid="172"><span class="push-tiny--sides text--uppercase small" data-reactid="173">OR</span></div>
+                              <h3 style="height: 40px;"><center>Sign up </center></h3>
+                              <div id="signup-form">
+                              <button type="submit" class="btn-signup-tutor" id="tutor-btn">as a <br/> tutor </button>
+                              <button type="submit" class="btn-signup-student" id="student-btn">as a <br/> student </button>
+                            </div>
+                            <div style="width: 50px; height: 20px"id="spacing"> </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About -->
+        <div class="features-container section-container">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 features section-description wow fadeIn">
+                      <h2>About</h2>
+                      <div class="divider-1 wow fadeInUp"><span></span></div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 features-box features-box wow fadeInUp">
+                    <div class="features-box-icon">
+                      <span aria-hidden="true" class="typcn typcn-thumbs-ok"></span>
+                    </div>
+                      <h3>What is Sage?</h3>
+                      <p>Sage is a web based tutoring service in which students can sign up to tutor other students.
+                        This service serves as a way for students who wish to tutor find those who wish to be tutored.</p>
+                    </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 features-box features-box-gray wow fadeInUp">
+                    <div class="features-box-icon">
+                      <span aria-hidden="true" class="typcn typcn-thumbs-ok"></span>
+                    </div>
+                      <h3>Why Choose Sage?</h3>
+                      <p>Sage provides as web based version of finding other students. It services as an online alternative
+                        to manually finding people who need to be tutored.</p>
+                    </div>
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Call to action -->
+        <div class="call-to-action-container section-container section-container-image-bg">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
+                      <h2>Call to action</h2>
+                      <div class="divider-1 wow fadeInUp"><span></span></div>
+                      <p>
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                        aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 section-bottom-button wow fadeInUp">
+                        <a class="btn btn-link-1 scroll-link" href="#top-content">Sign up now</a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- About the Team -->
+        <div class="about-us-container section-container">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 about-us section-description wow fadeIn">
+                      <h2>About us</h2>
+                      <div class="divider-1 wow fadeInUp"><span></span></div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4 about-us-box wow fadeInUp">
+                    <div class="about-us-photo">
+                      <img src="assets/img/about/1.jpg" alt="" data-at2x="assets/img/about/1.jpg">
+                      <div class="about-us-role">Developer</div>
+                    </div>
+                      <h3>C Placeholder</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div class="about-us-social">
+                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 about-us-box wow fadeInDown">
+                    <div class="about-us-photo">
+                      <img src="assets/img/about/2.jpg" alt="" data-at2x="assets/img/about/2.jpg">
+                      <div class="about-us-role">Developer</div>
+                    </div>
+                      <h3>A Placeholder</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div class="about-us-social">
+                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 about-us-box wow fadeInUp">
+                    <div class="about-us-photo">
+                      <img src="assets/img/about/3.jpg" alt="" data-at2x="assets/img/about/3.jpg">
+                      <div class="about-us-role">Developer</div>
+                    </div>
+                      <h3>S Placeholder</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div class="about-us-social">
+                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+                        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+          <div class="container">
+            <div class="row">
+                    <div class="col-sm-12 footer-social">
+                      <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+                      <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+                      <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+                      <a href="#"><span class="typcn typcn-social-google-plus"></span></a>
+                      <a href="#"><span class="typcn typcn-social-instagram"></span></a>
+                      <a href="#"><span class="typcn typcn-social-pinterest"></span></a>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col-sm-12 footer-copyright">
+                      &copy; Marco Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
+                    </div>
+                </div>
+          </div>
+        </footer>
+
+
+        <!-- MODAL: Privacy policy -->
+        <div class="modal fade" id="modal-privacy" tabindex="-1" role="dialog" aria-labelledby="modal-privacy-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h2 class="modal-title" id="modal-privacy-label">Privacy policy</h2>
+              </div>
+              <div class="modal-body">
+                <h3>1. Dolor sit amet</h3>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+                      <ul>
+                        <li>Easy To Use</li>
+                        <li>Awesome Design</li>
+                        <li>Cloud Based</li>
+                      </ul>
+                      <p>
+                        Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat nostrud tation.
+                      </p>
+                      <h3>2. Sed do eiusmod</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+                      <h3>3. Nostrud exerci tation</h3>
+                      <p>
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat nostrud tation.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL: Frequent questions -->
+        <div class="modal fade" id="modal-faq" tabindex="-1" role="dialog" aria-labelledby="modal-faq-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h2 class="modal-title" id="modal-faq-label">Frequent questions</h2>
+              </div>
+              <div class="modal-body">
+                <h3>1. Lorem ipsum dolor?</h3>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+                      <h3>2. Ut wisi enim ad minim?</h3>
+                      <p>
+                        Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat nostrud tation.
+                      </p>
+                      <h3>3. Sed do eiusmod tempor?</h3>
+                      <p>
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+                      <h3>4. Nostrud exerci tation?</h3>
+                      <p>
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat nostrud tation.
+                      </p>
+                      <h3>5. Consectetur adipisicing elit?</h3>
+                      <p>
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+        <script type="text/javascript" src = "js/index.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyBHEVuRmwW6KvesvZwo27tBCMUleuWko8M",
+      authDomain: "usernameandpassword-d55a8.firebaseapp.com",
+      databaseURL: "https://usernameandpassword-d55a8.firebaseio.com",
+      storageBucket: "usernameandpassword-d55a8.appspot.com",
+      messagingSenderId: "586459769797"
+      };
+      firebase.initializeApp(config);
+    </script>
+  
+    </body>
+
+</html>
