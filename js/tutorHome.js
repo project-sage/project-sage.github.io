@@ -80,7 +80,7 @@ function lookForStudent() {
 			// update student's address
 			var address = '3801 W Temple Ave, Pomona, CA 91768';
 			var name = 'Billy Bob Joe';
-			var phoneNum = '4086684825'
+			var phoneNum = '408-668-4825'
 			document.getElementById('studentName').innerHTML = 'Student\'s Name: ' + name.bold();
 			document.getElementById('addressOutput').innerHTML = 'Address: ' + address;
 			document.getElementById('phoneNumber').innerHTML = 'Phone Number: ' + phoneNum;
@@ -114,4 +114,8 @@ function acceptStudent() {
 function declineStudent() {
 	console.log('toaster called!');
 	toastr.info('You have decline this student.');
+}
+
+function logout(){
+	window.location = "index.html";
 }
