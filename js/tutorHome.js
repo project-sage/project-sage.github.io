@@ -4,15 +4,15 @@ function lookForStudent() {
 
 //calculates distance between two points in km's
 function calcDistance(p1, p2) {
-  return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
+  return ((google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2))*0.621371;
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 	// obtain tutors's current address
-	var latLocationTutor = 51.5073346; // default values - if errors
-	var lonLocationTutor = -0.1276831;  // default values
-	var latLocationStudent = 34.0557006; // default values - if errors
-	var lonLocationStudent = -117.8209629;  // default values
+	var latLocationTutor = 43.1557006; // default values - if errors
+	var lonLocationTutor = 1.1236831;  // default values
+	var latLocationStudent = 34.055673299999995; // default values - if errors
+	var lonLocationStudent = -117.92103409999999;  // default values
 
 	navigator.geolocation.getCurrentPosition(function(location) {
 		latLocationTutor = location.coords.latitude;
@@ -32,7 +32,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		    panControl : false,
   		});
 
-		// add markers for geolocation of the student's address
+		// draw line to destination
+		map.setCenter(latLocationTutor, lonLocationTutor);
+			map.drawRoute({
+				origin: [latLocationTutor, lonLocationTutor],
+		        destination: [latLocationStudent, lonLocationStudent],
+		        travelMode: 'driving',
+		        strokeColor: '#42bfc2',
+		        strokeOpacity: 0.8,
+		        strokeWeight: 6
+	      });
+
+		// calculate the time
+		map.getRoutes({
+            origin: [latLocationTutor, lonLocationTutor],
+            destination: [latLocationStudent, lonLocationStudent],
+            callback: function (e) {
+                var time = 0;
+                for (var i=0; i<e[0].legs.length; i++) {
+                    time += e[0].legs[i].duration.value;
+                }
+                var totalTime = (time/3600);
+                var distribution = totalTime/2;
+               	document.getElementById('timeArrival').innerHTML = (totalTime - distribution).toFixed(2) + ' - ' + (totalTime + distribution).toFixed(2) + ' mins';
+            }
+        });
+
+		// // add markers for geolocation of the student's address
 		map.addMarker({ 
 			lat: latLocationStudent,
 			lng: lonLocationStudent,
@@ -42,12 +68,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 	    });
 
+	    // if user clicks 'accept button'
+	    
 	    // calculate the distance 
 	    var p1 = new google.maps.LatLng(latLocationTutor, lonLocationTutor);
 		var p2 = new google.maps.LatLng(latLocationStudent, lonLocationStudent);
-		var distance = calcDistance (p1, p2);
-		document.getElementById('gps_ring_style').style.display = 'none';
-		console.log('Distance: ' + calcDistance(p1, p2));
+		var distance = calcDistance (p1, p2).toFixed(2);
+		document.getElementById('distangeRange').innerHTML = distance + ' miles';
+		console.log('Distance: ' + calcDistance(p1, p2) + ' miles.');
 
 	    setTimeout(function () {}, 5000); // delay of 5 seconds
 	    document.getElementById('gps_ring_style').style.display = 'none';
@@ -60,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	// address tutor's profit margin through formula
 	var priceFormula = 20;
-	var distribution = 5; //static
+	var distribution = priceFormula/4; //static
 	var output = '$' + (priceFormula - distribution) + ' - ' + '$' + (priceFormula + distribution);
 
 	console.log('priceoutput = ' + output);
