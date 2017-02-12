@@ -308,7 +308,7 @@ ul.navbar-nav {
 
 .form-top-left {
 	float: left;
-	width: 75%;
+	width: 100%;
 	padding-top: 25px;
 }
 
@@ -430,8 +430,8 @@ ul.navbar-nav {
 	display: none;
     border: 3px solid white;
     -webkit-border-radius: 30px;
-    height: 24px;
-    width: 24px;
+    height: 26px;
+    width: 26px;
     position: absolute;
     left: 600px;
     -webkit-animation: pulsate 1.5s ease-out;
@@ -444,6 +444,73 @@ ul.navbar-nav {
     50% {opacity: 1.0;}
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
+
+#addressOutput {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    padding-left: 0px;
+}
+
+#profitOutput {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+#titleAddress {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+}
+
+#estimatedPriceHeader {
+	font-size: 22px;
+    font-weight: 300;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+}
+
+.background-line-location {
+    color: #717171;
+    display: table;
+    margin: 6px 0;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    line-height: 2;
+}
+
+.background-line-location:before {
+    border-top: 2px solid #E5E5E4;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 1em;
+    width: 51%;
+}
+
+.background-line-location:after {
+    border-top: 2px solid #E5E5E4;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 1em;
+    width: 51%;
+}
+
+/** MAPS ***/
+#basic_map {
+	width:100%;
+	height:450px;
+}
+
 /***** Features *****/
 
 .features {

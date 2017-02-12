@@ -58,55 +58,38 @@
                             <div id="gps_ring_style" class="gps_ring"></div>
                         </div>
                         LOOK FOR STUDENTS 
-
                      </button>
                      <div class="spacer" style="height: 50px"></div>
                      <div class="col-sm-6 form-box wow fadeInUp">
                         <div class="form-top">
                            <div class="form-top-left">
-                              <h3>Location of Student</h3>
-                              <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <label class="sr-only" for="form-first-name">Email</label>
-                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="student-login-username"> <!-- id for first name user input -->
-                              <label class="sr-only" for="form-first-name">Password</label>
-                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="student-login-password"> <!-- id for last name user input -->
-                              <div style="width: 50px; height: 10px"id="spacing"> </div>
-                              <button type="submit" class="btn-login" onclick = "studentClicked()" id="student-btn">SIGN IN AS A STUDENT </button>
+                              <div style="height: 15px;" id="spacingAddress"></div>
+                              <div id="titleAddress">Location of Student</div>
+                              <div class="background-line-location" data-reactid="172"><span class="push-tiny--sides text--uppercase small" data-reactid="173"> &nbsp; &nbsp;</span></div>
+                              <div style="height: 30px;" id="spacingAddress"></div>
+                              <div id="addressOutput"> Address here!</div>
+                              <div style="height: 30px;" id="spacingAddress"></div>
+                              <div id="basic_map"></div> <!-- MAP CONTENT-->
                            </div>
                         </div>
                      </div>   
                         <div class="col-sm-6 form-box wow fadeInUp">
                           <div class="form-top">
                             <div class="form-top-left">
-                              <div class="float-icon-student">
-                                <h3>Sign in as a Student</h3>
-                              </div>
                               <div style="width: 50px; height: 10px" class="spacing"> </div>
-                              <label class="sr-only" for="form-first-name">Email</label>
-                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="student-login-username"> <!-- id for first name user input -->
-                              <label class="sr-only" for="form-first-name">Password</label>
-                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="student-login-password"> <!-- id for last name user input -->
-                              <div style="width: 50px; height: 10px"id="spacing"> </div>
-                              <button type="submit" class="btn-login" onclick = "studentClicked()" id="student-btn">SIGN IN AS A STUDENT </button>
-
-                            <div style="width: 50px; height: 20px" class="spacing"> </div>
-                              <div class="float-icon-tutor">
-                                <h3>Sign in to Tutor</h3>
+                              <div id="estimatedPriceHeader">Estimated Profit:</div>  
+                              <div style="width: 50px; height: 20px" class="spacing"> </div>
+                              <div id="profitOutput"> Profit Range!</div>
+                              <div style="width: 50px; height: 20px" class="spacing"> </div>
                             </div>
-                            <div style="width: 50px; height: 10px"id="spacing"> </div>
-                              <label class="sr-only" for="form-first-name">Email</label>
-                              <input name="form-first-name" placeholder="Email" class="form-signin top" id="tutor-login-username"> <!-- id for first name user input -->
-                              <label class="sr-only" for="form-first-name">Password</label>
-                              <input type="password" name="form-first-name" placeholder="Password" class="form-signin" id="tutor-login-password"> <!-- id for last name user input -->
-                              <div style="width: 50px; height: 10px"id="spacing"> </div>
-                              <button type="submit" class="btn-login" onclick="tutorClicked()" id="tutor-btn">SIGN IN AS A TUTOR </button>
-                              <div class="background-line" data-reactid="172"><span class="push-tiny--sides text--uppercase small" data-reactid="173">OR</span></div>
-                              <h3 style="height: 40px;"><center>Sign up </center></h3>
-                              <div id="signup-form">
-                              <button type="submit" class="btn-signup-tutor" id="tutor-btn">as a <br/> tutor </button>
-                              <button type="submit" class="btn-signup-student" id="student-btn">as a <br/> student </button>
-                            </div>
-                            <div style="width: 50px; height: 20px"id="spacing"> </div>
+                          </div>
+                        </div>
+                        <div id="spacing" style="height: 200px"></div>
+                        <div class="col-sm-6 form-box wow fadeInUp">
+                          <div class="form-top">
+                            <div class="form-top-left">
+                              <div id="estimatedPriceHeader">Estimated Profit:</div>  
+                              <div style="width: 50px; height: 10px" class="spacing"> </div>
                             </div>
                           </div>
                         </div>
@@ -145,27 +128,6 @@
                         to manually finding people who need to be tutored.</p>
                     </div>
               </div>
-              </div>
-          </div>
-        </div>
-
-        <!-- Call to action -->
-        <div class="call-to-action-container section-container section-container-image-bg">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-                      <h2>Call to action</h2>
-                      <div class="divider-1 wow fadeInUp"><span></span></div>
-                      <p>
-                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                        aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-                      </p>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12 section-bottom-button wow fadeInUp">
-                        <a class="btn btn-link-1 scroll-link" href="#top-content">Sign up now</a>
-                </div>
               </div>
           </div>
         </div>
@@ -281,28 +243,23 @@
           </div>
         </div>
 
+         <!-- Javascript -->
+         <script src="assets/js/jquery-1.11.1.min.js"></script>
+         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+         <script src="assets/js/jquery.backstretch.min.js"></script>
+         <script src="assets/js/wow.min.js"></script>
+         <script src="assets/js/retina-1.1.0.min.js"></script>
+         <script src="assets/js/scripts.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+         <script type="text/javascript" src = "js/tutorHome.js"></script>
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/retina-1.1.0.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-        <script type="text/javascript" src = "js/tutorHome.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-      apiKey: "AIzaSyBHEVuRmwW6KvesvZwo27tBCMUleuWko8M",
-      authDomain: "usernameandpassword-d55a8.firebaseapp.com",
-      databaseURL: "https://usernameandpassword-d55a8.firebaseio.com",
-      storageBucket: "usernameandpassword-d55a8.appspot.com",
-      messagingSenderId: "586459769797"
-      };
-      firebase.initializeApp(config);
-    </script>
-  
+         
+         <!-- GOOGLE MAPS API -->
+         <script type="text/javascript" src="js/maps-js/ajax-maps.js"></script>
+         <script type="text/javascript" src="js/maps-js/maps-api.js"></script>
+         <script type="text/javascript" src="js/maps-js/gmaps.js"></script>
+
+         <script src="assets/js/jquery.backstretch.min.js"></script>
     </body>
 
 </html>
