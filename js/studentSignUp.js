@@ -5,10 +5,11 @@ function clicked(){
   var lastName = document.getElementById('student-lastname').value; 
   var username = document.getElementById('student-email').value;
   var password = document.getElementById('student-password').value;
-  var tmp = document.getElementById('student-number').value
+  var tmp = document.getElementById('student-number').value;
   var phoneNumber = tmp.replace(/-|\s/g,"");  
   var confirmPassword = document.getElementById('student-confirm').value;
   var rightEmailFormat = username.includes("@");
+  var creditCardInfo = document.getElementById('credit-card').value; 
 
   if(password != confirmPassword){
     alert("your passwords didn't match, please correct them before continuing");
@@ -43,10 +44,9 @@ function clicked(){
           Student: true,
           Tutor: false,
           //Skills: areaExpertise,
-          //Credit_Card_Number : creditCardInfo,
           First_Name : firstName,
           Last_Name : lastName,
-          
+          Credit_Card_Number : creditCardInfo,
            
       });
   }
