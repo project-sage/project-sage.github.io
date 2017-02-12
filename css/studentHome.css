@@ -661,7 +661,8 @@ ul.navbar-nav {
 
 /** MAPS ***/
 #basic_map {
-	width:140%;
+    margin: 0 auto;
+	width: 70%;
 	height:550px;
 }
 
