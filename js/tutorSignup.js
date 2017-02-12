@@ -93,13 +93,20 @@ function clicked(){
           Phone_Number: phoneNumber,
           Student: false,
           Tutor: true,
-          Subject_String : subjectText,
           First_Name : firstName,
           Last_Name : lastName,
           Credit_Card_Number : creditCardInfo,
-          subject: subjectText,
-          specifics : outputBox 
+          
       });
+
+      firebase.database().ref('Users/' + usernameFinal + '/SubjectArea/' + subjectText).update({
+          SpecificArea : subjectText
+
+
+      });
+
+      
+
 
       firebase.database().ref('ListofCourses/' + subjectText).update({
         Specific:  outputBox
