@@ -47,7 +47,7 @@ function studentClicked(){
           var errorMessage = error.message;
           //if(errorCode === 'auth/wrong-password'){
           //alert('Wrong password.');
-     } //else{
+     }); //else{
           //alert(errorMessage);
      //}
           //console.log(error);

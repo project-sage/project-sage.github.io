@@ -12,12 +12,14 @@ function clicked(){
 
   if(password != confirmPassword){
     alert("your passwords didn't match, please correct them before continuing");
-    window.location.reload(); 
+    return; 
+    //window.location.reload(); 
   }
 
   if(!(rightEmailFormat)){
     alert("Wrong email format"); 
-    window.location.reload();
+    return; 
+    //window.location.reload();
   }
 
   //if()
