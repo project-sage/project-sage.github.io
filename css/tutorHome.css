@@ -252,16 +252,10 @@ ul.navbar-nav {
 	letter-spacing: 1px;
 	font-weight: 700;
 }
-/*
-#usernameDisplay:hover {
-	color: grey;
-	-o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
-}
-*/
 /***** Top content *****/
 
 .inner-bg {
-    padding: 30px 0 170px 0;
+    padding: 30px 0 0px 0;
     background-size: 100% 53%;
     background-repeat: no-repeat;
 }
@@ -454,7 +448,7 @@ ul.navbar-nav {
 }
 
 #profitOutput {
-	font-size: 22px;
+	font-size: 20px;
     font-weight: 300;
     color: black;
     line-height: 30px;
